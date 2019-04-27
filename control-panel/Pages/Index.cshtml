@@ -1,0 +1,33 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<form method="post" enctype="multipart/form-data" asp-controller="ZipFile" asp-action="Upload">
+    <div class="text-center">
+        <div class="form-group">
+            <div class="col-md-10">
+                <p>Username: </p>
+                <input type="username" name="username">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-10">
+                <p>Password: </p>
+                <input type="password" name="password">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-10">
+                <p>Upload file: <input type="file" name="files"></p>
+            </div>
+        </div>
+        <br>
+        <div class="form-group">
+            <div class="col-md-10">
+                <input type="submit" value="Upload" class="btn btn-primary">
+            </div>
+        </div>
+    </div>
+</form>
